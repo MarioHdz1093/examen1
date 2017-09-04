@@ -10,7 +10,7 @@ public class Estacionamiento
     
     public void entradaVeiculos(int numero)
     {
-        Veiculo.dimeDetalles();
+        veiculo[numero].dimeHora();
     }
     
     private int lugarDisponible()
@@ -25,11 +25,11 @@ public class Estacionamiento
         return -1;
     }
     
-     public boolean estacionar(Veiculo veiculo)
+     public boolean estacionar(Veiculo coche)
     {
-        int existe = this.lugarDisponible(veiculo.dimeDetalles());
+        int lugar = this.lugarDisponible();
         
-        if (existe == 1)
+        if (lugar == 1)
         {
             return false;
         }    
@@ -41,8 +41,15 @@ public class Estacionamiento
             return false;
         }
         
-        veiculo[estDis] = veiculo;
+        veiculo[estDis] = coche;
         
         return true;
+    }
+    
+    public int cobrar(int salida ,int i)
+    {
+        
+       // int entrada = veiculo[i].dimeHora;
+        
     }
 }

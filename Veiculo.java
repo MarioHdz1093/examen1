@@ -1,17 +1,17 @@
 public class Veiculo    
 {     
-    private String placas;
+    private String placa;
     private int hora;
     
-    public Veiculo(int horaIni, String placasIni)
+    public Veiculo(int hora, String placas)
     {
-        placas = placasIni;
-        hora = horaIni;
+        placa = placas;
+        this.hora = hora;
     }
     
-    public String dimeDetalles()
+    public int dimeHora()
     {
-        return "hora: " +hora+ "Placas: " +placas;
+        return hora; 
     }
     
    
